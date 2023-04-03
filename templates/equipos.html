@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Equipos generados</title>
+  </head>
+  <body>
+    <h1>Equipos generados</h1>
+    <h2>Equipo A (Camiseta Blanca)</h2>
+    <ul>
+      {% for nombre in equipo_A %}
+        <li>{{ nombre }}</li>
+      {% endfor %}
+    </ul>
+    <h2>Equipo B(Camiseta Negra) </h2>
+    <ul>
+      {% for nombre in equipo_B %}
+        <li>{{ nombre }}</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Volver</a>
+  </body>
+</html>

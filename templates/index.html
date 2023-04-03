@@ -1,19 +1,30 @@
-<head>
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-
-<body>
-    <div class="App">
-        <header class="App-header">
-            <img src="{{ url_for('static', filename='Octocat.png') }}" class="App-logo" alt="logo" />
-            <p>
-                GitHub Codespaces <span class="heart">♥️</span> Flask
-            </p>
-            <p class="small">
-                Edit <code>templates/index.html</code> and refresh to see your changes!
-            </p>
-        </header>
-    </div>
-</body>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Generador de equipos aleatorios</title>
+  </head>
+  <body>
+    <h1>Generador de equipos aleatorios</h1>
+    <form method="post">
+      <div id="nombres">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+      </div>
+      <button type="button" onclick="agregarCampoNombre()">Agregar Jugador</button>
+      <br>
+      <input type="submit" value="Generar equipos">
+    </form>
+    <script>
+      function agregarCampoNombre() {
+        const div = document.createElement('div');
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.name = 'nombre';
+        input.placeholder = 'Nombre';
+        input.required = true;
+        div.appendChild(input);
+        document.getElementById('nombres').appendChild(div);
+      }
+    </script>
+  </body>
 </html>
